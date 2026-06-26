@@ -1,18 +1,18 @@
 
-Feature: Login na plataforma EBAC-SHOP
+Funcionalidade: Login na plataforma EBAC-SHOP
 
   Como cliente da EBAC-SHOP
   Quero fazer login na plataforma  
   Para visualizar meus pedidos
 
-  Background:
+  Contexto:
     Given que estou na página de login
 
-  Scenario Outline: Autenticação do usuário na plataforma
-    When eu insiro credenciais "<usuario>" e "<senha>"
-    Then devo ver a mensagem "<mensagem>"
+  Esquema do Cenário: Autenticação do usuário na plataforma
+    Quando eu insiro credenciais "<usuario>" e "<senha>"
+    Então devo ver a mensagem "<mensagem>"
 
-  Examples:
+  Examplos:
     | usuario  | senha   | mensagem                         |
     | valido   | valido  | acesso liberado                  |
     | invalido | valido  | Usuário ou senha inválidos       |
